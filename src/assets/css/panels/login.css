@@ -22,27 +22,27 @@
     border: none;
     margin: 2% 0;
     height: 2em;
-    background-color: #00bd7a;
-    box-shadow: 0 0 5px #00bd7a;
-    color: #121212;
+    background-color: #dd74cc;
+    box-shadow: 0 0 5px #fa84c9;
+    color: #ffffff;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
 }
 
 .login-type-btn:hover {
-    background-color: #006e47;
-    box-shadow: 0 0 5px #006e47;
+    background-color: #6b2860;
+    box-shadow: 0 0 5px #be6298;
 }
 
 .login-type-btn:disabled {
-    background-color: #00bd7a;
-    box-shadow: 0 0 5px #00bd7a;
+    background-color: #6b2860;
+    box-shadow: 0 0 5px #be6298;
     cursor: default;
 }
 
 .login-type-btn:disabled:hover {
     background-color: #00bd7a;
-    box-shadow: 0 0 5px #00bd7a;
+    box-shadow: 0 0 5px #be6298;
 }
 
 .login-card-mojang {
