@@ -5,7 +5,7 @@
     "description": "Launcher Mincraft",
     "main": "src/app.js",
     "author": "EfectoDME",
-    "url": "",
+    "url": "http://girlsworldlauncher.ddns.net/launcher/",
     "engines": {
         "node": "16.x.x"
     },
