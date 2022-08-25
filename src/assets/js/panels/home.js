@@ -35,12 +35,12 @@ class Home {
                 blockNews.innerHTML = `
                     <div class="news-header">
                         <div class="header-text">
-                            <div class="title">Aucun news n'ai actuellement disponible.</div>
+                            <div class="title">No hay noticias disponibles actualmente.</div>
                         </div>
                     </div>
                     <div class="news-content">
                         <div class="bbWrapper">
-                            <p>Vous pourrez suivre ici toutes les news relative au serveur.</p>
+                            <p>Puedes seguir todas las noticias relacionadas con el servidor aquí.</p>
                         </div>
                     </div>`
                 news.appendChild(blockNews);
@@ -62,7 +62,7 @@ class Home {
                         <div class="news-content">
                             <div class="bbWrapper">
                                 <p>${News.content.replace(/\n/g, '</br>')}</p>
-                                <p class="news-author">Auteur,<span> ${News.author}</span></p>
+                                <p class="news-author"><span> ${News.author}</span></p>
                             </div>
                         </div>`
                     news.appendChild(blockNews);
@@ -136,7 +136,7 @@ class Home {
 
             launch.on('progress', (DL, totDL) => {
                 progressBar.style.display = "block"
-                document.querySelector(".text-download").innerHTML = `Téléchargement ${((DL / totDL) * 100).toFixed(0)}%`
+                document.querySelector(".text-download").innerHTML = `Descargando ${((DL / totDL) * 100).toFixed(0)}%`
                 ipcRenderer.send('main-window-progress', {DL, totDL})
                 progressBar.value = DL;
                 progressBar.max = totDL;
@@ -148,9 +148,9 @@ class Home {
 
             launch.on('check', (e) => {
                 progressBar.style.display = "block"
-                document.querySelector(".text-download").innerHTML = `Vérification ${((DL / totDL) * 100).toFixed(0)}%`
+                document.querySelector(".text-download").innerHTML = `Verificando ${((DL / totDL) * 100).toFixed(0)}%`
                 progressBar.value = DL;
-                progressBar.max = totDL;
+                progressBar.max = totDL; 
 
             })
 
@@ -158,7 +158,7 @@ class Home {
                 new logger('Minecraft', '#36b030');
                 if(launcherSettings.launcher.close === 'close-launcher') ipcRenderer.send("main-window-hide");
                 progressBar.style.display = "none"
-                info.innerHTML = `Demarrage en cours...`
+                info.innerHTML = `Juego en curso...`
                 console.log(e);
             })
 
@@ -167,7 +167,7 @@ class Home {
                 progressBar.style.display = "none"
                 info.style.display = "none"
                 playBtn.style.display = "block"
-                info.innerHTML = `Vérification`
+                info.innerHTML = `Verificando`
                 new logger('Launcher', '#7289da');
                 console.log('Close');
             })
@@ -183,12 +183,12 @@ class Home {
 
         if (!serverPing.error) {
             nameServer.textContent = this.config.status.nameServer;
-            serverMs.innerHTML = `<span class="green">En ligne</span> - ${serverPing.ms}ms`;
+            serverMs.innerHTML = `<span class="green">En línea</span> - ${serverPing.ms}ms`;
             online.classList.toggle("off");
             playersConnected.textContent = serverPing.playersConnect;
         } else if (serverPing.error) {
-            nameServer.textContent = 'Serveur indisponible';
-            serverMs.innerHTML = `<span class="red">Hors ligne</span>`;
+            nameServer.textContent = 'Servidor no disponible';
+            serverMs.innerHTML = `<span class="red">Fuera de línea</span>`;
         }
     }
 
@@ -203,7 +203,7 @@ class Home {
         let year = date.getFullYear()
         let month = date.getMonth() + 1
         let day = date.getDate()
-        let allMonth = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
+        let allMonth = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
         return { year: year, month: allMonth[month - 1], day: day }
     }
 }
