@@ -21,7 +21,8 @@
     "dependencies": {
         "electron-updater": "^5.0.1",
         "minecraft-java-core": "^2.1.1",
-        "node-fetch": "^2.6.7"
+        "node-fetch": "^2.6.7",
+        "update-electron-app": "^2.0.1"
     },
     "devDependencies": {
         "cross-env": "^7.0.3",
@@ -31,6 +32,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/luuxis/Selvania-Launcher.git"
+        "url": "git+https://github.com/modinodr/GW-Launcher.git"
     }
 }
