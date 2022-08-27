@@ -29,6 +29,20 @@
     cursor: pointer;
 }
 
+.login-type-btnd {
+    border-radius: 15px;
+    border: none;
+    margin: 2% 0;
+    height: 2em;
+    background-color: #dd74cc;
+    box-shadow: 0 0 5px #fa84c9;
+    color: #ffffff;
+    font: normal normal bold 19px/29px Poppins;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+
 .login-type-btn:hover {
     background-color: #6b2860;
     box-shadow: 0 0 5px #be6298;
@@ -41,7 +55,7 @@
 }
 
 .login-type-btn:disabled:hover {
-    background-color: #00bd7a;
+    background-color: #6b2860;
     box-shadow: 0 0 5px #be6298;
 }
 
