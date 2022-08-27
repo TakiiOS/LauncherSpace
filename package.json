@@ -1,7 +1,7 @@
 {
     "name": "GirlsWorld-Launcher",
     "preductname": "Girls World Launcher",
-    "version": "1.0.5",
+    "version": "1.0.3",
     "description": "Launcher Mincraft",
     "main": "src/app.js",
     "author": "EfectoDME",
@@ -32,6 +32,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/modinodr/GW-Launcher.git"
+        "url": "git+https://github.com/luuxis/Selvania-Launcher.git"
     }
 }
