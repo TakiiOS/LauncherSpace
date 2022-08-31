@@ -318,7 +318,8 @@
     background-color: #FF0409;
 }
 
-
-  
-
-  
+.nombre {
+    position:absolute;
+    bottom: 5px;
+    left: 100px;
+}

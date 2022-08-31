@@ -39,7 +39,7 @@
     color: #ffffff;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
-    /*pointer-events: none;*/
+    pointer-events: none;
 }
 
 
