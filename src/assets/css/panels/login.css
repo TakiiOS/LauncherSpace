@@ -18,45 +18,50 @@
 }
 
 .login-type-btn {
-    border-radius: 15px;
+    
     border: none;
     margin: 2% 0;
     height: 2em;
-    background-color: #dd74cc;
-    box-shadow: 0 0 5px #fa84c9;
+    background: #dd74cc;
+    box-shadow: 0 5px 0 #8b416c;
     color: #ffffff;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
 }
 
 .login-type-btnd {
-    border-radius: 15px;
+   
     border: none;
     margin: 2% 0;
     height: 2em;
-    background-color: #dd74cc;
-    box-shadow: 0 0 5px #fa84c9;
+    background: #dd74cc;
+    box-shadow: 0 5px 0 #8b416c;
     color: #ffffff;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
-    pointer-events: none;
+    /*pointer-events: none;*/
 }
 
 
 .login-type-btn:hover {
-    background-color: #6b2860;
-    box-shadow: 0 0 5px #be6298;
+    box-shadow: 0 2px 0 #8b416c;
+    transform: translateY(4px)
+}
+
+.login-type-btnd:hover {
+    box-shadow: 0 2px 0 #8b416c;
+    transform: translateY(4px)
 }
 
 .login-type-btn:disabled {
-    background-color: #6b2860;
-    box-shadow: 0 0 5px #be6298;
+    background: #dd74cc;
+    box-shadow: 0 5px 0 #8b416c;
     cursor: default;
 }
 
 .login-type-btn:disabled:hover {
-    background-color: #6b2860;
-    box-shadow: 0 0 5px #be6298;
+    background: #dd74cc;
+    box-shadow: 0 5px 0 #8b416c;
 }
 
 .login-card-mojang {
@@ -71,10 +76,12 @@
     color: #E1E1E1;
     border-radius: 15px;
     display: none;
+    
 }
 
 .card-body {
     margin: 10%;
+    border-radius: 10px;
 }
 
 .login-card-mojang-input {
@@ -104,20 +111,20 @@
 }
 
 .login-btn {
-    border-radius: 15px;
+    
     border: none;
     margin: 2% 0;
     height: 2em;
-    background-color: #00bd7a;
-    box-shadow: 0 0 5px #00bd7a;
+    background: #dd74cc;
+    box-shadow: 0 5px 0 #8b416c;
     color: #121212;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
 }
 
 .login-btn:hover {
-    background-color: #006e47;
-    box-shadow: 0 0 5px #006e47;
+    box-shadow: 0 2px 0 #8b416c;
+    transform: translateY(4px)
 }
 
 .cancel {

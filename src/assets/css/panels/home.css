@@ -3,8 +3,6 @@
     bottom: 0;
     width: 100%;
     height: 70px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
     background: #00000080;
     display: flex;
 }
@@ -19,7 +17,7 @@
     width: 50px;
     height: 50px;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
     transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
 }
 
@@ -29,19 +27,23 @@
 }
 
 .settings-btn {
+    background: #dd74cc;
+    font: normal normal bold 20px/25px Poppins;
+    color: #121212;
+    margin: 15px 0;
+    box-shadow: 0 5px 0 #8b416c;
     position: absolute;
-    top: 10px;
+    top: -8px;
     right: 30px;
     text-align: center;
     height: 50px;
     border: none;
-    border-radius: 15px;
-    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
+
 }
 
 .settings-btn:hover {
-    border-radius: 5px;
-    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
+    box-shadow: 0 2px 0 #8b416c;
+    transform: translateY(4px)
 }
 
 .icon-settings:before {
@@ -50,25 +52,30 @@
 
 .play-element {
     position: absolute;
+    top: 7px;
     left: 50%;
     transform: translate(-50%);
-    height: 100%;
     color: #F1F1F1;
     font: normal normal bold 19px/29px Poppins;
     text-align: center;
 }
 
 .play-btn {
-    top: 10px;
+    
     width: 160px;
-    height: 37px;
-    border-radius: 20px;
+    height: 50px;
     border: none;
     background: #dd74cc;
+    box-shadow: 0 5px 0 #8b416c;
     font: normal normal bold 20px/25px Poppins;
     color: #121212;
-    margin: 15px 0;
-    box-shadow: 0 0 5px #fa84c9;
+    
+}
+
+.play-btn:hover {
+  
+    box-shadow: 0 2px 0 #8b416c;
+    transform: translateY(4px)
 }
 
 .download-content {
@@ -106,6 +113,7 @@
     display: flex;
     height: 78vh;
     margin: 3rem 2rem;
+    border-radius: 10px;
 }
 
 .news-list {
@@ -309,3 +317,8 @@
 .online.off {
     background-color: #FF0409;
 }
+
+
+  
+
+  

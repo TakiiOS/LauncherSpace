@@ -122,11 +122,11 @@ class Login {
             loginBtn.disabled = true;
             mailInput.disabled = true;
             passwordInput.disabled = true;
-            infoLogin.innerHTML = "Connexion en cours...";
+            infoLogin.innerHTML = "Conexión en curso...";
 
 
             if (mailInput.value == "") {
-                infoLogin.innerHTML = "Entrez votre adresse email / Nom d'utilisateur"
+                infoLogin.innerHTML = "Ingrese su dirección de correo electrónico / nombre de usuario"
                 cancelMojangBtn.disabled = false;
                 loginBtn.disabled = false;
                 mailInput.disabled = false;
@@ -135,7 +135,7 @@ class Login {
             }
 
             if (passwordInput.value == "") {
-                infoLogin.innerHTML = "Entrez votre mot de passe"
+                infoLogin.innerHTML = "Ingresa tu contraseña"
                 cancelMojangBtn.disabled = false;
                 loginBtn.disabled = false;
                 mailInput.disabled = false;
@@ -176,11 +176,96 @@ class Login {
                 loginBtn.disabled = false;
                 mailInput.disabled = false;
                 passwordInput.disabled = false;
-                infoLogin.innerHTML = 'Adresse E-mail ou mot de passe invalide'
+                infoLogin.innerHTML = 'Dirección de correo electrónico o contraseña no válidos'
             })
         })
     }
 
+    loginOffline() {
+        let mailInput = document.querySelector('.Mail')
+        let passwordInput = document.querySelector('.Password')
+        let cancelMojangBtn = document.querySelector('.cancel-mojang')
+        let infoLogin = document.querySelector('.info-login')
+        let loginBtn = document.querySelector(".login-btn")
+        let mojangBtn = document.querySelector('.mojang')
+
+        mojangBtn.innerHTML = "Mojang"
+
+        mojangBtn.addEventListener("click", () => {
+            document.querySelector(".login-card").style.display = "none";
+            document.querySelector(".login-card-mojang").style.display = "block";
+        })
+
+        cancelMojangBtn.addEventListener("click", () => {
+            document.querySelector(".login-card").style.display = "block";
+            document.querySelector(".login-card-mojang").style.display = "none";
+        })
+
+        loginBtn.addEventListener("click", () => {
+            cancelMojangBtn.disabled = true;
+            loginBtn.disabled = true;
+            mailInput.disabled = true;
+            passwordInput.disabled = true;
+            infoLogin.innerHTML = "Conexión en curso...";
+
+
+            if (mailInput.value == "") {
+                infoLogin.innerHTML = "Ingrese su nombre de usuario"
+                cancelMojangBtn.disabled = false;
+                loginBtn.disabled = false;
+                mailInput.disabled = false;
+                passwordInput.disabled = false;
+                return
+            }
+
+            if (mailInput.value.length < 3) {
+                infoLogin.innerHTML = "Su nombre de usuario debe tener al menos 3 caracteres"
+                cancelMojangBtn.disabled = false;
+                loginBtn.disabled = false;
+                mailInput.disabled = false;
+                passwordInput.disabled = false;
+                return
+            }
+
+            Mojang.getAuth(mailInput.value, passwordInput.value).then(async account_connect => {
+                let account = {
+                    access_token: account_connect.access_token,
+                    client_token: account_connect.client_token,
+                    uuid: account_connect.uuid,
+                    name: account_connect.name,
+                    user_properties: account_connect.user_properties,
+                    meta: {
+                        type: account_connect.meta.type,
+                        offline: account_connect.meta.offline
+                    }
+                }
+
+                this.database.add(account, 'accounts')
+                this.database.update({ uuid: "1234", selected: account.uuid }, 'accounts-selected');
+
+                addAccount(account)
+                accountSelect(account.uuid)
+                changePanel("home");
+
+                cancelMojangBtn.disabled = false;
+                cancelMojangBtn.click();
+                mailInput.value = "";
+                loginBtn.disabled = false;
+                mailInput.disabled = false;
+                passwordInput.disabled = false;
+                loginBtn.style.display = "block";
+                infoLogin.innerHTML = "&nbsp;";
+            }).catch(err => {
+                console.log(err)
+                cancelMojangBtn.disabled = false;
+                loginBtn.disabled = false;
+                mailInput.disabled = false;
+                passwordInput.disabled = false;
+                infoLogin.innerHTML = 'Dirección de correo electrónico o contraseña no válidos'
+            })
+        })
+    }
 }
+
 
 export default Login;

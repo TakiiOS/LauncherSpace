@@ -11,18 +11,24 @@ body {
     margin: 0;
     padding: 0;
     user-select: none;
+    border-radius: 10px 0 0 0;
     background: linear-gradient(#00000066, #00000066), url("../images/background/light.jpg") no-repeat center center fixed;
     background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+
 }
 
 img {
     -webkit-user-drag: none;
     user-select: none;
+    border-radius: 10px 0 0 0;
 }
 
 .dragbar {
     position: fixed;
     background: #00000080;
+    opacity: 0;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -41,6 +47,7 @@ img {
     z-index: 11;
     -webkit-app-region: no-drag;
     display: none;
+    border-radius: 10px;
 }
 
 .hide {
