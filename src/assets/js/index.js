@@ -23,7 +23,7 @@ class Splash {
     async startAnimation() {
         let splashes = [
             
-            { "message": "Bienvenida a Girls World" }
+            { "message": "SpaceCrown une vie dans l'espace ..." }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
@@ -48,16 +48,16 @@ class Splash {
             else this.checkUpdate();
         }).catch(e => {
             console.error(e);
-            return this.shutdown("No se detectó conexión a Internet,<br>inténtelo de nuevo más tarde.");
+            return this.shutdown("Aucune connexion internet détectée,<br>veuillez réessayer ultérieurement.");
         })
     }
 
     async checkUpdate() {
-        this.setStatus(`Buscando actualización...`);
+        this.setStatus(`recherche d'un nouvelle espace...`);
         ipcRenderer.send('update-app');
 
         ipcRenderer.on('updateAvailable', () => {
-            this.setStatus(`¡Actualización disponible!`);
+            this.setStatus(`Mise à jour disponible !`);
             this.toggleProgress();
             ipcRenderer.send('start-update');
         })
@@ -73,16 +73,16 @@ class Splash {
 
 
     startLauncher() {
-        this.setStatus(`Iniciando el launcher`);
+        this.setStatus(`Démarrage du launcher`);
         ipcRenderer.send('main-window-open');
         ipcRenderer.send('update-window-close');
     }
 
     shutdown(text) {
-        this.setStatus(`${text}<br>Cerrando en 5s`);
+        this.setStatus(`${text}<br>Arrêt dans 5s`);
         let i = 4;
         setInterval(() => {
-            this.setStatus(`${text}<br>Cerrando en ${i--}s`);
+            this.setStatus(`${text}<br>Arrêt dans ${i--}s`);
             if (i < 0) ipcRenderer.send('update-window-close');
         }, 1000);
     }
