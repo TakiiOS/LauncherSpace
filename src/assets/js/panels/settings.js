@@ -90,7 +90,7 @@ class Settings {
 
     async initJavaPath() {
         let javaDatabase = (await this.database.get('1234', 'java-path'))?.value?.path;
-        let javaPath = javaDatabase ? javaDatabase : 'Utilizar la versión de java recomendada';
+        let javaPath = javaDatabase ? javaDatabase : 'Version de Java par défaut';
         document.querySelector(".info-path").textContent = `${dataDirectory.replace(/\\/g, "/")}/${process.platform == 'darwin' ? this.config.dataDirectory : `.${this.config.dataDirectory}`}/runtime`;
 
         let path = document.querySelector(".path");

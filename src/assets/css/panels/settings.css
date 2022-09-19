@@ -12,8 +12,8 @@
     width: 160px;
     height: 37px;
     margin: auto 30px;
-    background: #dd74cc;
-    box-shadow: 0 5px 0 #8b416c;
+    background: #6597AA;
+    box-shadow: 0 5px 0 #8AA4AE;
     font: normal normal bold 20px/25px Poppins;
     cursor: pointer;
     border-style:none;
@@ -21,21 +21,21 @@
 }
 
 .tab-btn-css:hover {
-    background: #dd74cc;
-    box-shadow: 0 2px 0 #8b416c;
+    background: #6597AA;
+    box-shadow: 0 2px 0 #8AA4AE;
     transform: translateY(4px);
     border-style:none;
 }
 
 .active-tab-btn {
-    background: #dd74cc;
-    box-shadow: 0 2px 0 #8b416c;
+    background: #6597AA;
+    box-shadow: 0 2px 0 #8AA4AE;
     transform: translateY(4px);
     border-style:none;
 }
 
 .active-tab-btn:hover {
-    background: #dd74cc;
+    background: #6597AA;
     
     
 }
@@ -197,7 +197,7 @@
 }
 
 .active-account {
-    background: #dd74cc;
+    background: #6597AA;
     background-color: #29292996;
     
     
@@ -205,7 +205,7 @@
 }
 
 .active-account:hover {
-    background: #dd74cc;
+    background: #6597AA;
     background-color: #29292996;
     
    
