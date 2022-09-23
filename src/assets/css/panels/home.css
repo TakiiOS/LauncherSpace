@@ -27,11 +27,12 @@
 }
 
 .settings-btn {
-    background: #6597AA;
-    font: normal normal bold 20px/25px Poppins;
+    background: #46C7F4;
+    box-shadow: 0 5px 0 #0FA0DA;
+    border-radius: 25px;
+    font: normal normal bold 20px/25px SpaceCrown;
     color: #121212;
     margin: 15px 0;
-    box-shadow: 0 5px 0 #8AA4AE;
     position: absolute;
     top: -8px;
     right: 30px;
@@ -42,7 +43,7 @@
 }
 
 .settings-btn:hover {
-    box-shadow: 0 2px 0 #8AA4AE;
+    box-shadow: 0 2px 0 #0FA0DA;
     transform: translateY(4px)
 }
 
@@ -56,7 +57,7 @@
     left: 50%;
     transform: translate(-50%);
     color: #F1F1F1;
-    font: normal normal bold 19px/29px Poppins;
+    font: normal normal bold 19px/29px SpaceCrown;
     text-align: center;
 }
 
@@ -65,16 +66,16 @@
     width: 160px;
     height: 50px;
     border: none;
-    background: #6597AA;
-    box-shadow: 0 5px 0 #8AA4AE;
-    font: normal normal bold 20px/25px Poppins;
+    background: #46C7F4;
+    box-shadow: 0 5px 0 #0FA0DA;
+    font: normal normal bold 20px/25px SpaceCrown;
     color: #121212;
     
 }
 
 .play-btn:hover {
   
-    box-shadow: 0 2px 0 #8AA4AE;
+    box-shadow: 0 2px 0 #0FA0DA;
     transform: translateY(4px)
 }
 
@@ -154,7 +155,7 @@
 
 .title {
     position: absolute;
-    font: normal normal bold 27px/40px Poppins;
+    font: normal normal bold 27px/40px SpaceCrown;
     letter-spacing: 0px;
     color: #E1E1E1;
     display: flex;
@@ -181,7 +182,7 @@
     width: 75px;
     text-align: center;
     font-weight: 900;
-    font-family: Poppins;
+    font-family: SpaceCrown;
     transition: color .2s;
 }
 
@@ -205,7 +206,7 @@
     position: relative;
     padding: 20px;
     background-color: #1f1f1f;
-    font-family: Poppins;
+    font-family: SpaceCrown;
     font-size: 13px !important;
     color: #E1E1E1;
     text-decoration: none;
@@ -255,7 +256,7 @@
 
 .name {
     position: absolute;
-    font: normal normal bold 17px/25px Poppins;
+    font: normal normal bold 17px/25px SpaceCrown;
     color: #E1E1E1;
     top: 17px;
     left: 70px;
@@ -264,7 +265,7 @@
 
 .desc {
     position: absolute;
-    font: normal normal normal 11px/17px Poppins;
+    font: normal normal normal 11px/17px SpaceCrown;
     color: #E1E1E1;
     transition: all .2s;
     top: 40px;
@@ -296,7 +297,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font: normal normal bold 13px/15px Poppins;
+    font: normal normal bold 13px/15px SpaceCrown;
     letter-spacing: 0px;
     color: #E1E1E1;
     transition: color .2s;

@@ -110,12 +110,12 @@ class Settings {
             if (file.value.replace(".exe", '').endsWith("java") || file.value.replace(".exe", '').endsWith("javaw")) {
                 this.database.update({ uuid: "1234", path: file.value }, 'java-path');
                 path.value = file.value.replace(/\\/g, "/");
-            } else alert("El nombre del archivo debe ser java o javaw");
+            } else alert("Le nom du fichier doit être java ou javaw");
 
         });
 
         document.querySelector(".path-button-reset").addEventListener("click", () => {
-            path.value = 'Utilizar la versión de java recomendada';
+            path.value = 'Version de Java par défaut';
             file.value = '';
             this.database.update({ uuid: "1234", path: false }, 'java-path');
         });

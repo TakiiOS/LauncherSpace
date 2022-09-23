@@ -12,30 +12,30 @@
     width: 160px;
     height: 37px;
     margin: auto 30px;
-    background: #6597AA;
-    box-shadow: 0 5px 0 #8AA4AE;
-    font: normal normal bold 20px/25px Poppins;
+    background: #46C7F4;
+    box-shadow: 0 5px 0 #0FA0DA;
+    font: normal normal bold 20px/25px SpaceCrown;
     cursor: pointer;
     border-style:none;
     
 }
 
 .tab-btn-css:hover {
-    background: #6597AA;
-    box-shadow: 0 2px 0 #8AA4AE;
+    background: #46C7F4;
+    box-shadow: 0 2px 0 #0FA0DA;
     transform: translateY(4px);
     border-style:none;
 }
 
 .active-tab-btn {
-    background: #6597AA;
-    box-shadow: 0 2px 0 #8AA4AE;
+    background: #46C7F4;
+    box-shadow: 0 2px 0 #0FA0DA;
     transform: translateY(4px);
     border-style:none;
 }
 
 .active-tab-btn:hover {
-    background: #6597AA;
+    background: #46C7F4;
     
     
 }
@@ -59,13 +59,13 @@
 
 .information {
     padding: 0 40px;
-    font: normal normal normal 16px/25px Poppins;
+    font: normal normal normal 16px/25px SpaceCrown;
     color: #F1F1F1;
 }
 
 .title-settings {
     text-align: center;
-    font: normal normal bold 20px/25px Poppins;
+    font: normal normal bold 20px/25px SpaceCrown;
     color: #F1F1F1;
     margin: 2% 0;
 }
@@ -107,7 +107,7 @@
     position: absolute;
     border: none;
     border-radius: 15px;
-    font: normal normal bold 30px/40px Poppins;
+    font: normal normal bold 30px/40px SpaceCrown;
     color: #ffffff;
     background-color: #30303000;
     box-shadow: 1px 2px 5px #58585800;
@@ -130,7 +130,7 @@
     display: block;
     position: absolute;
     background-color: #292929;
-    font: normal normal bold 30px/40px Poppins;
+    font: normal normal bold 30px/40px SpaceCrown;
     width: 500px;
     height: 100px;
     margin: 1% 2%;
@@ -157,7 +157,7 @@
 .account-name {
     margin: 0 100px;
     margin-top: 15px;
-    font: normal normal bold 24px/35px Poppins;
+    font: normal normal bold 24px/35px SpaceCrown;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -168,7 +168,7 @@
 
 .account-uuid {
     margin: 0 100px;
-    font: normal normal normal 18px/27px Poppins;
+    font: normal normal normal 18px/27px SpaceCrown;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -197,7 +197,7 @@
 }
 
 .active-account {
-    background: #6597AA;
+    background: #46C7F4;
     background-color: #29292996;
     
     
@@ -205,7 +205,7 @@
 }
 
 .active-account:hover {
-    background: #6597AA;
+    background: #46C7F4;
     background-color: #29292996;
     
    
@@ -251,7 +251,7 @@
     width: 20px;
     height: 10px;
     background: #F1F1F1;
-    border: 4px solid #f0b0e5;
+    border: 4px solid #46C7F4;
     transition: background-color .2s, border .2s;
     border-radius: 18px;
     cursor: pointer;
@@ -260,8 +260,8 @@
 .slider-touch-left span:after,
 .slider-touch-right span:after {
     content: attr(value);
-    color: #f0b0e5;
-    font: normal normal bold 12px/18px Poppins;
+    color: #46C7F4;
+    font: normal normal bold 12px/18px SpaceCrown;
     white-space: nowrap;
     pointer-events: none;
     position: absolute;
@@ -288,20 +288,20 @@
     display: block;
     height: 100%;
     width: 0%;
-    background: #f0b0e5;
+    background: #46C7F4;
     transition: background-color .2s;
 }
 
 .ram-info {
     display: flex;
     align-items: center;
-    font: normal normal bold 15px/25px Poppins;
+    font: normal normal bold 15px/25px SpaceCrown;
     color: #F1F1F1F1;
 }
 
 .path {
     min-width: 50%;
-    font: normal normal normal 13px/20px Poppins;
+    font: normal normal normal 13px/20px SpaceCrown;
     
     padding: 8px 16px;
     margin: 0 40px;
@@ -315,10 +315,10 @@
 }
 
 .path-button {
-    font: normal normal bold 13px/20px Poppins;
+    font: normal normal bold 13px/20px SpaceCrown;
     
     padding: 8px 30px;
-    background-color: #f0b0e5;
+    background-color: #46C7F4;
     cursor: pointer;
     margin-left: 20px;
     transition: color .2s, background-color .2s;
@@ -331,10 +331,10 @@
 }
 
 .path-button-reset {
-    font: normal normal bold 13px/20px Poppins;
+    font: normal normal bold 13px/20px SpaceCrown;
     border-radius: 18px;
     padding: 8px 30px;
-    background-color: #f0b0e5;
+    background-color: #46C7F4;
     cursor: pointer;
     margin-left: 20px;
     transition: color .2s, background-color .2s;
@@ -353,7 +353,7 @@
 
 .args-settings {
     min-width: 50%;
-    font: normal normal normal 13px/20px Poppins;
+    font: normal normal normal 13px/20px SpaceCrown;
     border-radius: 18px;
     padding: 8px 16px;
     margin: 0 40px;
@@ -434,8 +434,8 @@
 
 .select {
     border-radius: 40px;
-    background-color:  #f0b0e5;
-    font: normal normal normal 12px/18px Poppins;
+    background-color:  #46C7F4;
+    font: normal normal normal 12px/18px SpaceCrown;
     transition: color .2s, box-shadow .2s;
     border: none;
     outline: none;
@@ -479,7 +479,7 @@
 }
 
 .checkbox-settings:checked+label {
-    background-color: #f0b0e5;
+    background-color: #46C7F4;
 }
 
 .checkround {

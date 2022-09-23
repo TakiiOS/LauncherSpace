@@ -6,8 +6,8 @@
     width: 35%;
     background: #121212;
     padding: 20px;
-    font: normal normal bold 19px/29px Poppins;
-    color: #6597aa;
+    font: normal normal bold 19px/29px SpaceCrown;
+    color: #46C7F4;
     border-radius: 15px;
     text-align: center;
 }
@@ -22,10 +22,10 @@
     border: none;
     margin: 2% 0;
     height: 2em;
-    background: #dd74cc;
-    box-shadow: 0 5px 0 #8b416c;
+    background: #46C7F4;
+    box-shadow: 0 5px 0 #0FA0DA;
     color: #ffffff;
-    font: normal normal bold 19px/29px Poppins;
+    font: normal normal bold 19px/29px SpaceCrown;
     cursor: pointer;
 }
 
@@ -34,34 +34,34 @@
     border: none;
     margin: 2% 0;
     height: 2em;
-    background: #dd74cc;
-    box-shadow: 0 5px 0 #8b416c;
+    background: #46C7F4;
+    box-shadow: 0 5px 0 #0FA0DA;
     color: #ffffff;
-    font: normal normal bold 19px/29px Poppins;
+    font: normal normal bold 19px/29px SpaceCrown;
     cursor: pointer;
     pointer-events: none;
 }
 
 
 .login-type-btn:hover {
-    box-shadow: 0 2px 0 #8b416c;
+    box-shadow: 0 2px 0 #0FA0DA;
     transform: translateY(4px)
 }
 
 .login-type-btnd:hover {
-    box-shadow: 0 2px 0 #8b416c;
+    box-shadow: 0 2px 0 #0FA0DA;
     transform: translateY(4px)
 }
 
 .login-type-btn:disabled {
-    background: #dd74cc;
-    box-shadow: 0 5px 0 #8b416c;
+    background: #46C7F4;
+    box-shadow: 0 5px 0 #0FA0DA;
     cursor: default;
 }
 
 .login-type-btn:disabled:hover {
-    background: #dd74cc;
-    box-shadow: 0 5px 0 #8b416c;
+    background: #46C7F4;
+    box-shadow: 0 5px 0 #0FA0DA;
 }
 
 .login-card-mojang {
@@ -72,8 +72,8 @@
     width: 35%;
     background: #121212;
     padding: 0 20px;
-    font: normal normal bold 19px/29px Poppins;
-    color: #6597aa;
+    font: normal normal bold 19px/29px SpaceCrown;
+    color: #46C7F4;
     border-radius: 15px;
     display: none;
     
@@ -90,7 +90,7 @@
 }
 
 .login-mojang-input {
-    font-family: 'Poppins';
+    font-family: 'SpaceCrown';
     letter-spacing: 2px;
     color: #fff;
     border: solid 0px rgba(0, 0, 0, 0);
@@ -115,15 +115,15 @@
     border: none;
     margin: 2% 0;
     height: 2em;
-    background: #dd74cc;
-    box-shadow: 0 5px 0 #8b416c;
+    background: #46C7F4;
+    box-shadow: 0 5px 0 #0FA0DA;
     color: #121212;
-    font: normal normal bold 19px/29px Poppins;
+    font: normal normal bold 19px/29px SpaceCrown;
     cursor: pointer;
 }
 
 .login-btn:hover {
-    box-shadow: 0 2px 0 #8b416c;
+    box-shadow: 0 2px 0 #0FA0DA;
     transform: translateY(4px)
 }
 
@@ -131,7 +131,7 @@
     border: none;
     background-color: #ffffff00;
     color: #F1F1F1;
-    font: normal normal bold 19px/29px Poppins;
+    font: normal normal bold 19px/29px SpaceCrown;
     cursor: pointer;
 }
 

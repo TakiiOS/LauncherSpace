@@ -1,7 +1,7 @@
 {
   "name": "SpaceCrown",
   "preductname": "SpaceCrown Launcher",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Launcher Mincraft",
   "main": "src/app.js",
   "author": "EfectoDME",
