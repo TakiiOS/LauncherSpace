@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\assets\\images",
+    "\\src\\assets\\images\\background",
+    "\\src\\assets\\images\\default",
+    "\\src\\assets\\js",
+    "\\src\\assets\\js\\panels",
+    "\\src\\assets\\js\\utils",
+    "\\src\\panels"
   ],
-  "SelectedNode": "\\C:\\Users\\Taki\\Source\\Repos\\GW-Launcher",
+  "SelectedNode": "\\src\\panels\\home.html",
   "PreviewInSolutionExplorer": false
 }

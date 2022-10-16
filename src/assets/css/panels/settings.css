@@ -1,43 +1,53 @@
 .tabs-settings-btn {
     position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 70px;
-    background: #00000080;
+    bottom: -30px;
+    left: 13px;
+    padding: 20px;
+    width: 95%;
+    height: 100px;
+    background-color: transparent;
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .tab-btn-css {
-    width: 160px;
-    height: 37px;
-    margin: auto 30px;
-    background: #46C7F4;
-    box-shadow: 0 5px 0 #0FA0DA;
-    font: normal normal bold 20px/25px SpaceCrown;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    margin: 10px;
+    background-color: transparent;
+    background-image: url("../../images/tab-btn.png");
+    background-position: center center;
+    background-size: cover;
+    font: normal normal normal 20px/25px SpaceCrown;
     cursor: pointer;
     border-style:none;
-    
+    color: white;
+    transition: all .3s ease;
 }
 
 .tab-btn-css:hover {
-    background: #46C7F4;
-    box-shadow: 0 2px 0 #0FA0DA;
-    transform: translateY(4px);
+    background-image: url("../../images/tab-btn-hover.png");
     border-style:none;
+    transform: translateY(2px);
+    transition: all .3s ease;
 }
 
-.active-tab-btn {
-    background: #46C7F4;
-    box-shadow: 0 2px 0 #0FA0DA;
-    transform: translateY(4px);
-    border-style:none;
-}
-
+.active-tab-btn,
 .active-tab-btn:hover {
-    background: #46C7F4;
-    
-    
+    background-image: url("../../images/tab-btn-select.png");
+    border-style:none;
+    color: #00F6F8;
+    transform: translateY(4px);
+    transition: all .3s ease;
+}
+
+.tab-btn-css:last-child {
+    background-image: url("../../images/tab-btn-valid.png");
+}
+.tab-btn-css:last-child:hover {
+    background-image: url("../../images/tab-btn-valid-hover.png");
 }
 
 .tabs-settings-content {
@@ -59,22 +69,120 @@
 
 .information {
     padding: 0 40px;
-    font: normal normal normal 16px/25px SpaceCrown;
+    font: normal normal normal 18px/25px SpaceCrown;
     color: #F1F1F1;
+}
+.information b{
+    color: #0FA0DA;
+    text-shadow:
+    0 0 .25rem rgb(0, 0, 0),
+    0 0 .5rem #0FA0DA,
+    0 0 1rem #0fa1da7e;
+
 }
 
 .title-settings {
     text-align: center;
-    font: normal normal bold 20px/25px SpaceCrown;
-    color: #F1F1F1;
+    font: normal normal 100 22px/25px SpaceCrown;
     margin: 2% 0;
+    color: #46C7F4;
+    text-shadow:
+        0 0 .25rem rgb(0, 0, 0),
+        0 0 .5rem #0FA0DA,
+        0 0 1rem #0fa1da7e;
 }
+
+.glitch{
+    animation: glitch 6s linear infinite;
+    position: relative;
+    width: 96%;
+    height: 40px;
+    margin: 2%;
+    padding: 0;
+}
+
+.glitch:before{
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    animation: glitchTop 4s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    text-align: center;
+    font: normal normal 100 22px/25px SpaceCrown;
+    width: 100%;
+    height: 40px;
+  }
+
+  .glitch:after{
+    content: attr(title);
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    margin: 0;
+    padding: 0;
+    animation: glitchBotom 3s linear infinite;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    text-align: center;
+    font: normal normal 100 22px/25px SpaceCrown;
+    width: 100%;
+    height: 40px;
+  }
+
+  .glitch2{
+    animation: glitch 2.5s linear infinite;
+    position: relative;
+    width: 96%;
+    height: 40px;
+    margin: 2%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.glitch2:before{
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    animation: glitchTop 2s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    text-align: center;
+    font: normal normal 100 30px/40px SpaceCrown;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .glitch2:after{
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 2px;
+    margin: 0;
+    padding: 0;
+    animation: glitchBotom 3s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    text-align: center;
+    font: normal normal 100 30px/40px SpaceCrown;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 
 .center-align {
     text-align: center;
 }
 
 .settings-content-scroll {
+    position: relative;
     overflow: auto;
     width: 100%;
     height: 100%;
@@ -95,26 +203,19 @@
 
 /*******************************************************************************
  *                                                                             *
- * account sttings                                                             *
+ * account settings                                                             *
  *                                                                             *
  ******************************************************************************/
 
 .add-account {
-    width: 800px;
-    height: 80px;
-    left: 50%;
-    transform: translate(-47%);
-    position: absolute;
     border: none;
     border-radius: 15px;
-    font: normal normal bold 30px/40px SpaceCrown;
-    color: #ffffff;
-    background-color: #30303000;
+    background-color: transparent;
     box-shadow: 1px 2px 5px #58585800;
-    margin-bottom: 10px;
     pointer-events: none;
-
-    
+    text-align: center;
+    font: normal normal 100 30px/40px SpaceCrown;
+    color: #F1F1F1;
 }
 
 .accounts {
@@ -152,6 +253,16 @@
     height: 70px;
     margin: 15px 20px;
     pointer-events: none;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    border-color: #3FDFE5;
+    box-shadow:
+        0 0 .5rem #fff,
+        inset 0 0 .25rem rgba(255, 255, 255, 0.5),
+        0 0 2rem #0FA0DA,
+        inset 0 0 1rem #0fa1da81,
+        0 0 4rem #0FA0DA,
+        inset 0 0 2rem #0fa1da7e;
 }
 
 .account-name {
@@ -179,15 +290,42 @@
 
 .account-delete {
     margin: -60px 415px;
-    color: #f73434;
+    color: #aa1616;
     font-size: 50px;
-    background: #353535c7;
-    box-shadow: 0 0 5px #353535c7;
+    background-color: #850000;
     width: 65px;
     height: 65px;
     border-radius: 100%;
     cursor: pointer;
     text-align: center;
+    border: 1px solid #ff0409;
+    background-image: url(../../images/bg.png);
+    background-repeat: repeat;
+    background-size: 10px 10px;
+    background-position: 0 0;
+    animation: screeneffect 1s linear infinite;
+    transition: all ease .2s;
+    box-shadow:
+        0 0 0.25rem #f00,
+        inset 0 0 0.15rem rgb(0 0 0),
+        0 0 1rem rgb(218 15 15 / 50%),
+        inset 0 0 0.5rem rgb(218 15 15 / 25%),
+        0 0 2rem rgb(218 15 15 / 50%),
+        inset 0 0 1rem rgb(218 15 15 / 25%);    
+}
+
+.account-delete:hover {
+    box-shadow:
+        0 0 .25rem rgb(255, 0, 0),
+        inset 0 0 .15rem rgba(255, 255, 255, 0.5),
+        0 0 1rem #da0f0f,
+        inset 0 0 0.5rem rgba(218, 15, 15, 0.5),
+        0 0 2rem #da0f0f,
+        inset 0 0 1rem rgba(218, 15, 15, 0.5);
+    text-shadow: 0 0 2rem rgba(43, 3, 3, 0.7);
+    border: 1px solid #ff0409;
+    color: #ff3e3e;
+    background-color: #c70000;
 }
 
 .icon-account-delete-btn {
@@ -197,19 +335,28 @@
 }
 
 .active-account {
-    background: #46C7F4;
-    background-color: #29292996;
-    
-    
-    
+    background: #292929;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url(../../images/bg.png);
+    background-repeat: repeat;
+    background-size: 10px 10px;
+    background-position: 0 0;
+    animation: screeneffect 1s linear infinite;
+    transition: all ease .5s;
+    box-shadow:
+        0 0 .25rem #fff,
+        inset 0 0 .15rem rgba(255, 255, 255, 0.25),
+        0 0 1rem rgba(15, 161, 218, 0.5),
+        inset 0 0 0.5rem rgba(15, 161, 218, 0.25),
+        0 0 2rem rgba(15, 161, 218, 0.5),
+        inset 0 0 1rem rgba(15, 161, 218, 0.25);
 }
 
 .active-account:hover {
     background: #46C7F4;
-    background-color: #29292996;
-    
-   
-    
+    background-color: #29292996;    
 }
 
 
@@ -225,6 +372,21 @@
     width: 90%;
     margin: 0 auto;
     padding: 20px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url(../../images/bg.png);
+    background-repeat: repeat;
+    background-size: 10px 10px;
+    background-position: 0 0;
+    animation: screeneffect 1s linear infinite;
+    transition: all ease .5s;
+    box-shadow:
+        0 0 .25rem #fff,
+        inset 0 0 .15rem rgba(255, 255, 255, 0.25),
+        0 0 1rem rgba(15, 161, 218, 0.5),
+        inset 0 0 0.5rem rgba(15, 161, 218, 0.25),
+        0 0 2rem rgba(15, 161, 218, 0.5),
+        inset 0 0 1rem rgba(15, 161, 218, 0.25);
 }
 
 .memory-slider {
@@ -255,6 +417,9 @@
     transition: background-color .2s, border .2s;
     border-radius: 18px;
     cursor: pointer;
+    box-shadow:
+        0 0 1rem #0FA0DA,
+        0 0 2rem #0fa1da7e;
 }
 
 .slider-touch-left span:after,
@@ -268,6 +433,11 @@
     top: -20px;
     left: 83%;
     transform: translate(-50%);
+    text-shadow:
+    0 0 .25rem rgb(0, 0, 0),
+    0 0 1rem #0FA0DA,
+    0 0 2rem #0fa1da7e;
+
 }
 
 .slider-line {
@@ -278,10 +448,13 @@
     top: 7px;
     height: 4px;
     border-radius: 4px;
-    background-color: #F0F0F0;
-    transition: background-color .2s;
+    background-color: rgba(240, 240, 240, 0.9);
+    transition: all .2s ease;
     z-index: 0;
     overflow: hidden;
+    box-shadow:
+        0 0 .25rem rgba(255, 255, 255, 0.9),
+        0 0 1rem rgba(255, 255, 255, 0.5);
 }
 
 .slider-line span {
@@ -290,6 +463,9 @@
     width: 0%;
     background: #46C7F4;
     transition: background-color .2s;
+    box-shadow:
+        0 0 1rem #0FA0DA,
+        0 0 2rem #0fa1da7e;
 }
 
 .ram-info {
@@ -297,17 +473,28 @@
     align-items: center;
     font: normal normal bold 15px/25px SpaceCrown;
     color: #F1F1F1F1;
+    background-color: rgba(31, 31, 31, 0.5);
+    border-radius: 40px;
+    margin-top: 10px;
+    text-shadow:
+        0 0 .25rem rgb(0, 0, 0),
+        0 0 1rem #0FA0DA,
+        0 0 2rem #0fa1da7e;
+}
+
+#total-ram,
+#free-ram{
+    color: #0FA0DA;
 }
 
 .path {
     min-width: 50%;
     font: normal normal normal 13px/20px SpaceCrown;
-    
+    border-radius: 40px;
     padding: 8px 16px;
     margin: 0 40px;
     margin-top: 2%;
     color: #F1F1F1F1;
-    
     user-select: text;
     transition: color .2s, background-color .2s;
     border: none;
@@ -383,31 +570,43 @@
     left: 50%;
     top: 70%;
     transform: translate(-50%, 0);
+    height: 40px;
 }
 
 .input-settings {
+    position: relative;
     text-align: center;
-    background: #1f1f1f;
-    border: none;
     outline: none;
-    border-radius: 40px;
-    font-size: 20px;
     width: 100px;
+    font: normal normal normal 16px/20px SpaceCrown;
     color: #F1F1F1F1;
+    text-shadow:
+        0 0 .25rem rgb(0, 0, 0),
+        0 0 1rem #000000,
+        0 0 2rem #0000007e;
+    border: 0;
+    background-color: rgba(31, 31, 31, 0.5);
+    border-radius: 40px;
+    background-repeat: repeat;
+    background-size: 10px 10px;
+    background-position: 0 0;
+    box-shadow:
+        0 0 .25rem #1f1f1f,
+        inset 0 0 .15rem rgba(31, 31, 31, 0.25),
+        0 0 1rem rgba(31, 31, 31, 0.5),
+        inset 0 0 0.5rem rgba(31, 31, 31, 0.25);
 }
 
 .size-cross {
     margin: 10px;
-}
-
-.size-cross:before {
-    font: normal normal bold 20px Icons;
-    content: "\e90e";
+    font: normal normal bold 20px/14px SpaceCrown;
+    color: rgba(31, 31, 31, 0.5);
 }
 
 .select-wrap {
     display: inline-flex;
     margin-left: 10px;
+    color: #44b4e1;
 }
 
 .select-wrap:before {
@@ -427,19 +626,29 @@
     font-size: 24px;
     pointer-events: none;
     transform: rotate(180deg);
-    color: black;
     transition: color .2s;
     pointer-events: none;
 }
 
 .select {
     border-radius: 40px;
-    background-color:  #46C7F4;
-    font: normal normal normal 12px/18px SpaceCrown;
     transition: color .2s, box-shadow .2s;
-    border: none;
     outline: none;
     appearance: none;
+    width: 60%;
+    font: normal normal normal 16px/18px SpaceCrown;
+    background-color: rgb(45 136 169 / 50%);
+    border: 1px solid #46C7F4;
+    background-image: url(../../images/bg.png);
+    background-repeat: repeat;
+    background-size: 10px 10px;
+    background-position: 0 0;
+    animation: screeneffect 1s linear infinite;
+    transition: all ease .2s;
+    box-shadow:
+    0 0 .25rem rgba(70, 198, 244, 0.7),
+    0 0 1rem rgba(15, 161, 218, 0.5),
+    0 0 2rem rgba(15, 161, 218, 0.25);  
 }
 
 
@@ -449,25 +658,65 @@
  *                                                                             *
  ******************************************************************************/
  .checkbox-settings {
-    font: normal normal bold 20px Icons;
+    font: normal normal bold 20px SpaceCrown;
     display: none;
     color: white;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    background-image: url(../../images/bg.png);
+    background-repeat: repeat;
+    background-size: 10px 10px;
+    background-position: 0 0;
+    animation: screeneffect 1s linear infinite;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow:
+    0 0 0.25rem rgba(10, 30, 37, 0.7),
+    0 0 1rem rgba(2, 22, 31, 0.5),
+    0 0 2rem rgba(2, 32, 44, 0.25);
 }
 
 .checkbox-settings+label {
-    font: normal normal bold 20px Icons;
-    display: inline;
+    display: inline-block;
     position: relative;
     top: 2px;
-    margin-right: 24px;
+    margin-right: 20px;
     width: 16px;
     height: 16px;
-    border-radius: 8px;
-    transition: background-color .2s;
-    padding: 0px;
-    background-color: #FFFFFF;
-    cursor: pointer;
+    font: normal normal bold 20px SpaceCrown;
     color: white;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transform: rotate(-45deg);
+    transition: all .2s;
+}
+
+.checkbox-settings:hover+label{
+    transform: rotate(0deg);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 0 0.25rem rgba(0, 0, 0, 0.7),
+        0 0 1rem rgba(0, 0, 0, 0.5),
+        0 0 2rem rgba(0, 0, 0, 0.25);
+}
+
+.checkbox-settings:checked+label {
+    background-color: rgba(70, 198, 244, 0.7);
+    box-shadow:
+    0 0 0.25rem rgba(70, 198, 244, 0.7),
+    0 0 1rem rgb(15 161 218 / 50%),
+    0 0 2rem rgb(15 161 218 / 25%);
+    transform: rotate(45deg);
+}
+
+.checkbox-settings:checked:hover+label {
+    transform: rotate(90deg);
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow:
+    0 0 0.25rem rgba(255, 255, 255, 0.7),
+    0 0 1rem rgba(255, 255, 255, 0.5),
+    0 0 2rem rgba(255, 255, 255, 0.25);
+
 }
 
 .checkround {
@@ -475,18 +724,152 @@
     z-index: 2;
     border-radius: 7px;
     transition: all .2s;
-    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    left: 2px;
+    top: 2px;
+    font: normal normal normal 16px/18px SpaceCrown;
+    background-color: rgb(0 0 0 / 50%);
+    box-shadow:
+        0 0 0.25rem rgba(70, 198, 244, 0.7),
+        0 0 1rem rgb(15 161 218 / 50%),
+        0 0 2rem rgb(15 161 218 / 25%);
 }
 
-.checkbox-settings:checked+label {
-    background-color: #46C7F4;
+.checkbox-settings:checked+label .checkround {
+    background-color: 0 0 0.25rem rgba(70, 198, 244, 0.7);
 }
 
-.checkround {
-    border-radius: 3px;
+.scroll-top {
+    position: fixed;
+    top: 70px;
+    right: 3px;
+    width: 24px;
+    height: 24px;
+    transform: rotate(180deg);
 }
 
-.checkbox-settings+label {
-    display: inline-block;
-    margin-right: 8px;
+.scroll-bottom {
+    position: fixed;
+    bottom: 70px;
+    right: 3px;
+    width: 24px;
+    height: 24px;
 }
+  
+.chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+}
+  
+.chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+}
+  
+.chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+}
+  
+.chevron:before,
+.chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #46C7F4;
+}
+  
+.chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+    box-shadow:
+    -0.25rem 0 .25rem rgba(15, 161, 218, 0.8),
+    -1rem 0 1rem rgba(15, 161, 218, 0.5),
+    -2rem 0 2rem rgba(15, 161, 218, 0.25);
+}
+  
+.chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+    box-shadow:
+    0.25rem 0 .25rem rgba(15, 161, 218, 0.8),
+    1rem 0 1rem rgba(15, 161, 218, 0.5),
+    2rem 0 2rem rgba(15, 161, 218, 0.25);
+}
+
+@keyframes move {
+    25% {
+        opacity: 1;
+
+    }
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    67% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+}
+  
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }
+
+@keyframes glitch{
+    3%,62%{
+      transform: translate(1px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-1px,0) skew(0deg);
+    }
+    61%{
+      transform: translate(0,0) skew(1deg); 
+    }
+  }
+
+  @keyframes glitchTop{
+      2%,64%{
+        transform: translate(2px,-2px);
+      }
+      4%,60%{
+        transform: translate(-0px,0px);
+      }
+      62%{
+        transform: translate(13px,-1px) skew(-13deg); 
+      }
+    }
+    
+  @keyframes glitchBotom{
+      2%,64%{
+        transform: translate(-2px,0);
+      }
+      4%,60%{
+        transform: translate(-2px,0);
+      }
+      62%{
+        transform: translate(-22px,5px) skew(21deg); 
+      }
+    }
+
+    @keyframes screeneffect {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 0 10px;
+        }
+    }

@@ -22,8 +22,40 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
+            { "message": "Bienvenue Commandant..." },
+            { "message": "Préparation du vaisseau..." },
+            { "message": "Décollage imminent..." },
+            { "message": "Vérification des résultats..." },
+            { "message": "Chargement du moteur F. T. L. ..." },
+            { "message": "Repli des trains d'atterrissages..." },
+            { "message": "Allumage des moteurs..." },
+            { "message": "Préparation des capsules..." },
+            { "message": "Enfilez votre combinaison..." },
+            { "message": "Prêt pour une E. V. A. ..." },
+            { "message": "Ajout de modules opérationelles..." },
+            { "message": "Pressurisation en cours..." },
+            { "message": "En approche de la cible..." },
+            { "message": "Décompression terminé..." },
+            { "message": "Verouillage du S. A. S. ..." },
+            { "message": "Mise en orbite géostationnaire..." },
+            { "message": "Entrée atmosphérique imminente..." },
+            { "message": "Proposez-nous votre message perso..." },
+            { "message": "Activation du pilotage automatique..." },
+            { "message": "Désactivation du F. T. S. ..." },
+            { "message": "Attachez vos harnais..." },
+            { "message": "Test des sous-systèmes..." },
+            { "message": "Casque à Oxygen requis..." },
+            { "message": "Transmission vers CAPCOM..." },
+            { "message": "Ouverture d'un canal sécurisé..." },
+            { "message": "Réglage du fuseau horaire..." },
+            { "message": "Réception de coordonées..." },
+            { "message": "Chargement du BluePrint..." },
+            { "message": "Analyse du terrain..." },
+            { "message": "Récupération des produits..." },
+            { "message": "Systèmes entièrement opérationnels..." },
+            { "message": "Initialisation du système..." }
             
-            { "message": "SpaceCrown une vie dans l'espace ..." }
+            
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
@@ -37,7 +69,7 @@ class Splash {
         this.splashMessage.classList.add("opacity");
         this.splashAuthor.classList.add("opacity");
         this.message.classList.add("opacity");
-        await sleep(2000);
+        await sleep(3000);
         this.maintenanceCheck();
     }
 

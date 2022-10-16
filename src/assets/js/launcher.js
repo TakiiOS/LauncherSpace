@@ -41,6 +41,7 @@ class Launcher {
         console.log("Initializing Frame...")
         document.querySelector(".frame").classList.toggle("hide")
         document.querySelector(".dragbar").classList.toggle("hide")
+        document.querySelector(".dragmenu").classList.toggle("hide")
 
         document.querySelector("#minimize").addEventListener("click", () => {
             ipcRenderer.send("main-window-minimize");

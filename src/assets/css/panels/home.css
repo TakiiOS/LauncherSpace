@@ -1,13 +1,48 @@
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}            
+::-webkit-scrollbar-track {
+    background-color: rgb(32, 40, 48);
+}
+::-webkit-scrollbar-track-piece {
+    background-color: rgb(18, 22, 26);
+}
+::-webkit-scrollbar-thumb {
+    height: 25%;
+    background-color: rgb(32, 40, 48);
+    border: 1px rgb(18, 22, 26) solid;
+}
+::-webkit-scrollbar-corner {
+    background-color: rgb(32, 40, 48);
+}
+
 .bottom-bar-home {
     position: fixed;
-    bottom: 0;
-    width: 100%;
+    bottom: 20px;
+    left: 50px;
+    right: 50px;
     height: 70px;
-    background: #00000080;
     display: flex;
+    z-index: 1;
+}
+.bevel {
+    overflow:hidden;
+    clip-path: polygon(
+        0 10%,
+        10% 0,
+        90% 0,
+        100% 10%,
+        100% 90%,
+        90% 100%,
+        10% 100%,
+        0% 90%,
+        0% 10%);
 }
 
 .player-head {
+    display: block;
+    position: relative;
     margin: auto 30px;
     background-image: url("../../images/default/setve.png");
     background-size: cover;
@@ -16,35 +51,55 @@
     background-color: transparent;
     width: 50px;
     height: 50px;
-    border: none;
+    transform: scale(1);
+    transition: all 0.3s ease;
     border-radius: 5px;
-    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
+    border-color: #3FDFE5;
+    box-shadow:
+        0 0 .5rem #fff,
+        inset 0 0 .25rem rgba(255, 255, 255, 0.5),
+        0 0 2rem #0FA0DA,
+        inset 0 0 1rem #0fa1da81,
+        0 0 4rem #0FA0DA,
+        inset 0 0 2rem #0fa1da7e;
 }
 
 .player-head:hover {
-    border-radius: 5px;
-    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+    box-shadow:
+    0 0 .5rem #fff,
+    inset 0 0 .25rem rgba(255, 255, 255, 0.5),
+    0 0 2rem #6bb9d8,
+    inset 0 0 1rem #0fa1da81,
+    0 0 4rem #8fc1d4,
+    inset 0 0 2rem #9ec4d37e;
+
 }
 
 .settings-btn {
-    background: #46C7F4;
-    box-shadow: 0 5px 0 #0FA0DA;
+    background-image: url("../../images/option.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
     border-radius: 25px;
     font: normal normal bold 20px/25px SpaceCrown;
-    color: #121212;
+    color: transparent;
     margin: 15px 0;
     position: absolute;
-    top: -8px;
+    top: -5px;
     right: 30px;
     text-align: center;
     height: 50px;
     border: none;
-
+    transition: all ease 0.3s;
 }
 
 .settings-btn:hover {
-    box-shadow: 0 2px 0 #0FA0DA;
-    transform: translateY(4px)
+    background-image: url("../../images/option-hover.png");
+    transform: rotate(25deg);
+    transition: all ease 0.3s;
 }
 
 .icon-settings:before {
@@ -53,30 +108,34 @@
 
 .play-element {
     position: absolute;
-    top: 7px;
+    width: 20%;
+    height: 70px;
     left: 50%;
+    top: 0;
     transform: translate(-50%);
-    color: #F1F1F1;
+    color: transparent;
     font: normal normal bold 19px/29px SpaceCrown;
     text-align: center;
 }
 
 .play-btn {
-    
-    width: 160px;
-    height: 50px;
+    width: 100%;
+    height: 70px;
     border: none;
-    background: #46C7F4;
-    box-shadow: 0 5px 0 #0FA0DA;
     font: normal normal bold 20px/25px SpaceCrown;
-    color: #121212;
-    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    color: transparent;
+    background-image: url("../../images/play.png");
+    transition: all ease 0.3s;
 }
 
 .play-btn:hover {
-  
-    box-shadow: 0 2px 0 #0FA0DA;
-    transform: translateY(4px)
+    background-image: url("../../images/play-hover.png");
+    transform: scale(1.1);
+    transition: all ease 0.3s;
 }
 
 .download-content {
@@ -84,6 +143,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .text-download,
@@ -93,6 +153,7 @@
 
 .text-download {
     font-size: 15px;
+    color: #0FA0DA;
 }
 
 .progress-bar {
@@ -106,7 +167,7 @@
 }
 
 .progress-bar::-webkit-progress-value {
-    background-color: #fa84c9;
+    background-color: white;
     border-radius: 10px;
 }
 
@@ -115,6 +176,7 @@
     height: 78vh;
     margin: 3rem 2rem;
     border-radius: 10px;
+    flex-wrap: wrap;
 }
 
 .news-list {
@@ -226,19 +288,133 @@
 
 .info-list {
     position: relative;
-    width: 65vh;
+    width: 100%;
     padding-left: 1rem;
     background: none;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.server {
+.info-item{
     position: relative;
     width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+iframe.discord{
+    z-index: 2;
+    flex: 2;
+    margin: 10px;
+    border: 1px solid #3FDFE5;
+    border-radius: 12px;
+    box-shadow:
+        0 0 .5rem #ffffff75,
+        0 0 2rem #0FA0DA,
+        0 0 4rem #0FA0DA;
+    overflow: hidden;
+ }
+
+ .discord {
+    animation-name: discord-c;
+    animation-duration: .2s;
+    animation-play-state: pause;
+    float: left;
+    height: 70px;
+    width: 250px;
+    opacity: .7;
+}
+
+.discord:hover {
+    height: 400px;
+    width: 250px;
+    float: left;
+    animation-name: discord;
+    animation-duration: .2s;
+    animation-play-state: pause;
+    opacity: 1;
+}
+
+.welcome{
+    flex: 3;
+    width: 100%;
+    height: 140px;
+    font: normal normal 100 37px/40px SpaceCrown;
+    background-image: url("../../images/logotop.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    color: transparent;
+    vertical-align: middle;
+    margin-top: -50px;
+}
+
+.newscontent iframe{
+    position: absolute;
+    display: block;
+    top: 147px;
+    left: 55px;
+    width: 92%;
+    height: 66%;
+    border: none;
+    background: transparent;
+    z-index: 0;
+    animation: Fade ease-in-out 5s forwards;
+    opacity: 0;
+ }
+
+ .newscontent::before{
+    content: "";
+    position: absolute;
+    display: block;
+    top: 132px;
+    left: 40px;
+    width: 1200px;
+    height: 50px;
+    background-image: url(../../images/separator-bot.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    z-index: 1;
+    transform: rotate(180deg);
+    animation: Appear ease-in-out 5s infinite forwards;
+    opacity:0;
+ }
+ 
+.newscontent::after{
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 85px;
+    left: 40px;
+    width: 1200px;
+    height: 50px;
+    background-image: url(../../images/separator-bot.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    z-index: 1;
+    animation: Appear ease-in-out 5s infinite;
+    opacity:0;
+ }
+ .server {
+    flex: 2;
+    margin: 8px;
+    position: relative;
+    width: auto;
     height: 75px;
-    background-color: #292929;
+    background-image: radial-gradient(rgb(87 208 232 / 50%), transparent);
+    box-shadow:
+        inset 0 0 1em rgb(87 208 232 / 50%),
+        0 0 1em rgb(87 208 232 / 50%);
     border-radius: 10px;
+    border: 1px solid rgb(87 208 232 / 50%);
     transition: opacity 1s;
-    opacity: .6;
+    opacity: 0.8;
+    overflow: hidden;
 }
 
 .server:hover {
@@ -248,15 +424,15 @@
 
 .server-img {
     position: absolute;
-    width: 42px;
-    height: 45px;
-    top: 15px;
-    left: 15px;
+    width: 60px;
+    height: 60px;
+    top: 5px;
+    left: 5px;
 }
 
 .name {
     position: absolute;
-    font: normal normal bold 17px/25px SpaceCrown;
+    font: normal normal bold 19px/25px SpaceCrown;
     color: #E1E1E1;
     top: 17px;
     left: 70px;
@@ -268,17 +444,24 @@
     font: normal normal normal 11px/17px SpaceCrown;
     color: #E1E1E1;
     transition: all .2s;
-    top: 40px;
+    top: 37px;
     left: 70px;
     transition: color .2s;
 }
 
 .green {
     color: #1AC707;
+    text-shadow: 
+    0 0 0.25rem transparent,
+    0 0 1rem rgba(18, 122, 9, 0.7);
 }
 
 .red {
-    color: #FF0409;
+    font: normal normal bold 15px/27px SpaceCrown;
+    color: #da0f0f;
+    text-shadow:
+    0 0 0.25rem transparent,
+    0 0 1rem rgba(122, 9, 9, 0.7);
 }
 
 .etat-text {
@@ -287,9 +470,10 @@
     right: 14px;
     width: 49px;
     height: 33px;
-    background-color: #262626;
-    border-radius: 4px;
+    border-radius: 10px;
     transition: background-color .2s;
+    border: 1px solid #262626;
+    background-color: rgba(38, 38, 38, 1);
 }
 
 .text {
@@ -313,10 +497,25 @@
     border: 2px solid #1A1A1A;
     transition: all .2s;
     background-color: #1AC707;
+    box-shadow:
+        0 0 .25rem rgb(21, 255, 0),
+        inset 0 0 .15rem rgba(255, 255, 255, 0.5),
+        0 0 1rem #31da0f,
+        inset 0 0 0.5rem rgba(32, 218, 15, 0.5),
+        0 0 2rem #0fda2a,
+        inset 0 0 1rem rgba(32, 218, 15, 0.5);
 }
 
 .online.off {
-    background-color: #FF0409;
+    border: 1px solid #ff0409;
+    background-color: rgba(199, 0, 0, 0.7);
+    box-shadow:
+        0 0 .25rem rgb(255, 0, 0),
+        inset 0 0 .15rem rgba(255, 255, 255, 0.5),
+        0 0 1rem #da0f0f,
+        inset 0 0 0.5rem rgba(218, 15, 15, 0.5),
+        0 0 2rem #da0f0f,
+        inset 0 0 1rem rgba(218, 15, 15, 0.5);
 }
 
 .nombre {
@@ -325,45 +524,75 @@
     left: 100px;
 }
 
+@keyframes Appear {
+    0% {
+        opacity:0.7;
+    }
+    2%{
+        opacity: 1;
+    }
+    47%{
+        opacity: 0.9;
+    }
+    49%{
+        opacity: 0.7;
+    }
+    50%{
+        opacity: 1;
+    }
+    51%{
+        opacity: 0.7;
+    }
+    53%{
+        opacity: 0.9;
+    }
+    98%{
+        opacity: 0.7;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@keyframes Fade {
+    0% {
+        opacity:0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0.5;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
 @keyframes discord {
     0% {
         height: 70px;
         width: 250px;
+        opacity: .7;
     }
 
     100% {
-        height: 300px;
+        height: 400px;
         width: 250px;
+        opacity: 1;
     }
 }
 
 @keyframes discord-c {
     0% {
-        height: 300px;
+        height: 400px;
         width: 250px;
+        opacity: 1;
     }
 
     100% {
         height: 70px;
         width: 250px;
+        opacity: .7;
     }
 }
-
-.discord {
-    animation-name: discord-c;
-    animation-duration: 2s;
-    animation-play-state: pause;
-    float: left;
-    height: 70px;
-    width: 250px;
-}
-
-.discord:hover {
-    height: 300px;
-    width: 250px;
-    float: left;
-    animation-name: discord;
-    animation-duration: 2s;
-    animation-play-state: pause;
-    }
- 

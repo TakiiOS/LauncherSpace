@@ -4,19 +4,29 @@
         <button class="tab-btn-css tab-btn">Java</button>
         <button class="tab-btn-css tab-btn">Résolution</button>
         <button class="tab-btn-css tab-btn">Launcher</button>
-        <button class="tab-btn-css save-tabs-btn">Sauvegarder</button>
+        <button class="tab-btn-css save-tabs-btn">Enregistrer</button>
     </div>
 
     <div class="tabs-settings-content active-tab-content">
         <div class="center-align">
-            <button class="add-account">Ajouter un compte</button>
+            <div class="add-account glitch2" title="Paramètre de compte">Paramètre de compte</div>
             <div class="accounts"></div>
         </div>
-    </div>>
+    </div>
 
     <div class="tabs-settings-content">
         <div class="settings-content-scroll">
-            <div class="title-settings">Paramètre de votre RAM.</div>
+            <div class="scroll-top">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </div>
+            <div class="scroll-bottom">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </div>
+            <div class="title-settings glitch" title="Paramètre de votre RAM.">Paramètre de votre RAM.</div>
             <div class="java-settings">
                 <div class="information">
                     Définition de la RAM alloué à votre jeu, une quantité plus important augmenteras les performances de votre jeu.<br> A noter qu'il faut éviter de mettre une trop grande quantité sinon cela peut provoquer des pertes de performances sur vos
@@ -46,7 +56,7 @@
                 </div>
             </div>
 
-            <div class="title-settings">Emplacement de Java.</div>
+            <div class="title-settings glitch" title="Emplacement de Java.">Emplacement de Java.</div>
             <div class="java-settings">
                 <div class="information">
                     Le launcher utilise une version embarquée de Java.<br> Cette version est disponible dans le répertoire <span class="info-path"></span>.<br> Toutefois, vous pouvez spécifier votre propre exécutable.
@@ -57,7 +67,7 @@
                 <input type="file" class="path-file" accept="application/octet-stream" />
             </div>
 
-            <div class="title-settings">Paramètres des arguments java.</div>
+            <div class="title-settings glitch" title="Paramètres des arguments java.">Paramètres des arguments java.</div>
             <div class="java-settings">
                 <div class="information">
                     Les arguments java sont utilisés pour définir les paramètres de votre jeu.
@@ -69,7 +79,7 @@
 
     <div class="tabs-settings-content">
         <div class="center-page">
-            <div class="title-settings">Paramètre de la résolution de minecraft.</div>
+            <div class="title-settings glitch" title="Paramètre de la résolution de minecraft.">Paramètre de la résolution de minecraft.</div>
             <div class="java-settings">
                 <div class="information">
                     Définissez une résolution personnalisée ou choisissez-en une dans la liste en fonction de la taille de votre écran.
@@ -77,7 +87,7 @@
                 <div class="input-size-content">
                     <div class="input-size">
                         <input type="text" class="width-size input-settings" disabled>
-                        <div class="size-cross"></div>
+                        <div class="size-cross">x</div>
                         <input type="text" class="height-size input-settings" disabled>
                         <div class="select-wrap icon-monitor">
                             <select id="select" class="select">
@@ -110,10 +120,9 @@
             </div>
         </div>
     </div>
-
     <div class="tabs-settings-content">
         <div class="center-page">
-            <div class="title-settings">Paramètre après le lancement du jeu.</div>
+            <div class="title-settings glitch" title="Paramètre de lancement du jeu.">Paramètre de lancement du jeu.</div>
             <div class="java-settings information">
                 <input type="checkbox" class="checkbox-settings" id="launcher-close"><label for="launcher-close"><div class="checkround"></div></label> Fermer le launcher après le lancement du jeu.</br>
                 <input type="checkbox" class="checkbox-settings" id="launcher-close-all"><label for="launcher-close-all"><div class="checkround"></div></label> Fermer le jeu si le launcher est fermé.</br>

@@ -2,9 +2,9 @@
   "name": "SpaceCrown",
   "preductname": "SpaceCrown Launcher",
   "version": "1.0.5",
-  "description": "Launcher Mincraft",
+  "description": "SpaceCrown Launcher",
   "main": "src/app.js",
-  "author": "EfectoDME",
+  "author": "Taki",
   "url": "http://launcher.minecrown.fr/",
   "engines": {
     "node": "16.x.x"

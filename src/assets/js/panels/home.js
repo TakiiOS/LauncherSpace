@@ -196,6 +196,10 @@ class Home {
         document.querySelector('.settings-btn').addEventListener('click', () => {
             changePanel('settings');
         });
+        document.querySelector('.player-head').addEventListener('click', () => {
+            changePanel('settings');
+        });
+        
     }
 
     async getdate(e) {
