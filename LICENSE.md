@@ -1,7 +1,6 @@
 All Rights Reserved
 
-Copyright (c) LauncherSpace ${owner}
-
+Copyright (c) LauncherSpace Takiios & Luuxis
 Created by Takiios
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
